@@ -8,16 +8,17 @@
   </head>
   <body>
     <div id="root">
-      <h1>hello,{{name}}</h1>
+      <h1>hello,{{name.toUpperCase()}}, {{address}}</h1>
     </div>
-
-    <script>
-      new Vue({
-        el: "#root",
-        data: {
-            name: '自定义name'
-        }
-      });
-    </script>
   </body>
+  
+  <script>
+    new Vue({
+      el: "#root",
+      data: {
+        name: "huashang",
+        address: "增城",
+      },
+    });
+  </script>
 </html>

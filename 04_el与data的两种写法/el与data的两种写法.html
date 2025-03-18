@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>el与data的两种写法</title>
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <h1>hello,{{name}}</h1>
+    </div>
+  </body>
+
+  <script>
+    // const v = new Vue({
+    //   //   el: "#root",
+    //   data: {
+    //     name: "huashang",
+    //   },
+    // });
+    // console.log(v);
+    // // setTimeout(() => {
+    // //   v.$mount("#root");
+    // // }, 1000);
+    // v.$mount("#root");
+
+    new Vue({
+      el: "#root",
+      //   data: {
+      //     name: "huashang",
+      //   },
+      //   data: function () {
+      data() {
+        console.log("@@@", this);
+        return {
+          name: "huashang",
+        };
+      },
+    });
+  </script>
+</html>
