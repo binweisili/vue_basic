@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Object.definePropety方法</title>
+  </head>
+  <body>
+    <script>
+      let number = 18;
+      let person = {
+        name: "张三",
+        sex: "男",
+        // age: number,
+        // age: 18,
+      };
+
+      Object.defineProperty(person, "age", {
+        // value: 18,
+        // enumerable: true, // 属性是否可以枚举
+        // writable: true, // 属性是否可以修改
+        // configurable: true, // 属性是否可以删除
+
+        get() {
+          console.log("有人读取了age属性");
+          return number;
+        },
+
+        set(value) {
+          console.log("有人修改了number属性");
+          number = value;
+        },
+      });
+
+      // console.log(Object.keys(person))
+
+      // for (let key in person) {
+      //   console.log("@", person[key]);
+      // }
+
+      console.log(person);
+    </script>
+  </body>
+</html>

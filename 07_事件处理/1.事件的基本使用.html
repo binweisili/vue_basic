@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>事件的基本使用</title>
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div>欢迎来到{{name}}</div>
+      <button v-on:click="showInfo1">点击显示信息（不传参）</button>
+      <button @click="showInfo2($event, 66)">点击显示信息（传参）</button>
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: "#root",
+        data: {
+          name: "华商",
+        },
+        methods: {
+          showInfo1(event) {
+            // console.log(event.target.innerText);
+            // console.log(this === vm);
+            // console.log(this);
+            alert("欢迎你!");
+          },
+          showInfo2(event, number) {
+            console.log(event, number);
+            alert("欢迎你!!");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

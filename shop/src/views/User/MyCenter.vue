@@ -16,7 +16,7 @@
         </div>
         
         <!-- 订单导航 -->
-        <!-- <div class="order-nav">
+        <div class="order-nav" style="margin-left: 10px; margin-right: 10px;">
           <div class="nav-title">
             <span>我的订单</span>
             <span class="view-all" @click="goToOrders">查看全部订单 <i class="el-icon-arrow-right"></i></span>
@@ -39,7 +39,7 @@
               <span>已完成</span>
             </div>
           </div>
-        </div> -->
+        </div>
         
         <!-- 工具列表 -->
         <div class="tool-list" style="margin-top: 10px;">

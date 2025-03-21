@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>vue数据代理</title>
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <h2>学校名称： {{name}}</h2>
+      <h2>学校地址： {{address}}</h2>
+      <!-- <h2>学校名称： {{_data.name}}</h2>
+      <h2>学校地址： {{_data.address}}</h2> -->
+    </div>
+
+    <script>
+      const vm = new Vue({
+        el: "#root",
+        data: {
+          name: "华商",
+          address: "增城",
+        },
+      });
+    </script>
+  </body>
+</html>

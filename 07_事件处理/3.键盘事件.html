@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>键盘事件</title>
+    <script src="../js/vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <h2>欢迎来到{{name}}</h2>
+      <input type="text" placeholder="按下回车提示输入" @keyup.enter="showInfo" />
+    </div>
+  </body>
+
+  <script>
+    new Vue({
+      el: "#root",
+      data: {
+        name: "华商",
+      },
+      methods: {
+        showInfo(e) {
+        //   console.log(e.target.value);
+        // if (e.keyCode !== 13) return
+        console.log(e.target.value);
+        },
+      },
+    });
+  </script>
+</html>
